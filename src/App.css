@@ -12,10 +12,13 @@
 }
 
 .input_container {
-  margin: 10px;
+  margin-bottom: 10px;
   background: #2b4242;
   padding: 30px 10px;
   border-radius: 5px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
 }
 
 input::placeholder {
@@ -77,10 +80,10 @@ input:focus {
 
 .body {
   border: 5px solid #777;
-  margin-left: 10px;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  max-width: 92vw;
+  max-width: 1200px;
   margin: auto;
 }
 

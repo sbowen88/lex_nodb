@@ -107,6 +107,8 @@ class App extends React.Component {
       <input name="img_url" value={this.state.img_url} onChange={this.handleChange} placeholder="image_url" />
       <button className="add_btn" onClick={this.handleCreate}>Add new product</button>
     </div>
+    
+    
     const update_form = <div className="update_form"><h2>Update Product?</h2>
       {/* <input name="id" value={this.state.id} onChange={this.handleChange} placeholder="id" /> */}
       <input name="product_name" value={this.state.product_name} onChange={this.handleChange} placeholder="product_name" />
