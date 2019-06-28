@@ -1,0 +1,160 @@
+.App {
+  width: 100vw;
+  height: 100vh;
+}
+
+.header {
+  width: 100%;
+  border: 1px solid #777;
+  display: flex;
+  justify-content: center;
+}
+
+.input_container {
+  margin: 10px;
+  background: #2b4242;
+  padding: 30px 10px;
+}
+
+input::placeholder {
+  text-indent: 5px;
+}
+
+input {
+  box-sizing: border-box;
+  border-color: #AAA;
+  border-width: 0px 0px 2px 0px;
+  color: white;
+  outline: none;
+  transition: all 0.3s;
+  padding: 0px 15x;
+  margin-right: 10px;
+  background: #2b4242;
+  font-size: 18px;
+}
+
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+input:focus:-moz-placeholder {
+  color: transparent;
+}
+
+/* FF 4-18 */
+
+input:focus::-moz-placeholder {
+  color: transparent;
+}
+
+/* FF 19+ */
+
+input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+/* IE 10+ */
+
+input:focus {
+  border-bottom: 2px solid #FFF;
+}
+
+.pics {
+  display: flex;
+  max-width: 400px;
+  height: 100vh;
+  border: 1px solid #777;
+  margin-left: 10px;
+}
+
+.leftSideBar {
+  width: 200px;
+  height: 100%;
+  border: 1px solid #777;
+}
+
+.body {
+  border: 5px solid #777;
+  margin-left: 10px;
+  display:flex;
+  flex-wrap:wrap;
+  max-width: 92vw;
+  margin: auto;
+}
+
+.card {
+  width: 200px;
+  border: 1px solid #777;
+  margin: 10px;
+}
+
+.add_btn {
+  cursor: pointer;
+  height: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #58c996;
+  background-color: white;
+  border-radius: 40px;
+  border: 2px solid #58c996;
+  transition: all 0.2s;
+  letter-spacing: 1px;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+.add_btn:hover {
+  background: #58c996;
+  color: white;
+}
+
+.product_img {
+  max-width: 200px;
+  padding: 5px;
+}
+
+.list_product {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  background: #f2f2f2;
+  position: relative;
+  height: 300px;
+}
+
+.delete_btn{
+  width: 80px;
+  position: absolute;
+  bottom: 40px;
+}
+.update_btn{
+  width: 80px;
+  position: absolute;
+  bottom: 20px;
+}
+.update_form{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.3s all ease;
+}
+/* media queries */
+
+@media only screen and (max-width:600px) {
+  .input_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  input {
+    max-width: 50%;
+    font-size: 14px;
+  }
+  .add_btn {
+    margin-top: 10px;
+  }
+  .body{justify-content: center;}
+}

@@ -1,0 +1,33 @@
+[
+    {
+      "id": 1,
+      "product_name": "Bont Super B",
+      "price": 399.00 ,
+      "img_url": "http://www.bont.com/quad/products/super-b/web/Derby-VS-Speed.jpg"
+    },
+    {
+      "id": 2,
+      "product_name": "PowerDyne Arius Platinum Plates",
+      "price": 369.00,
+      "img_url": "https://cdn2.bigcommerce.com/n-d57o0b/dmke2u/products/1885/images/6809/PD-Arius-Platinum-Plate-Web-XLarge__94300.1525724987.1280.1280.png?c=2"
+    },
+    {
+      "id": 3,
+      "product_name": "Radar Presto Wheels",
+      "price": 49.00,
+      "img_url": "https://www.roller.riedellskates.com/UserFiles/Images/Products//XLarge/Roller/Radar-Presto59-93A-RedOrange-Angle-Web-XLarge.png"
+    },
+    {
+      "id": 4,
+      "product_name": "Bones Swiss Ceramic Bearings",
+      "price": 151.00,
+      "img_url": "https://www.tactics.com/a/ajog/2/bones-bearings-swiss-ceramic-skateboard-bearings-black.webp"
+    },
+    {
+      "id": 5,
+      "product_name":"PowerDyne Jupiter Toe Stops" ,
+      "price": 20.00,
+      "img_url": "https://www.roller.riedellskates.com/UserFiles/Images/Products//XLarge/Roller/PD-Jupiter-Stop-Pair-Web-XLarge.PNG"
+    }
+    
+  ]
