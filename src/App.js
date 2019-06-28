@@ -99,7 +99,7 @@ class App extends React.Component {
         price: '',
         img_url: '',
       }))
-      console.log('product updated')
+    console.log('product updated')
 
   }
 
@@ -134,10 +134,10 @@ class App extends React.Component {
     return (
       <div className="App">
         <div className="header">
-          <h3>Lex's Products</h3>
+          <p class="shadow text1">Derby Products</p>
         </div>
         {this.state.toggle ? update_form : null}
-        {this.state.toggle ? null:add_form}
+        {this.state.toggle ? null : add_form}
         <div className="body">{list}</div>
       </div>
 
