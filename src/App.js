@@ -15,7 +15,8 @@ class App extends React.Component {
     price: '',
     img_url: '',
     data: '',
-    toggle: false
+    toggle: false,
+    showError:false
   };
 
 
@@ -30,7 +31,7 @@ class App extends React.Component {
     this.setState({ [e.target.name]: e.target.value });
   }
 
-  toggle = (id) => this.setState({ id: id, toggle: !this.state.toggle });
+  toggle = (id) => this.setState({ id: id, toggle: !this.state.toggle, showError:false });
 
   handleCreate = (e) => {
     const { id, price, product_name, img_url } = this.state;
@@ -52,9 +53,10 @@ class App extends React.Component {
           price: '',
           img_url: '',
         }))
+        this.setState({ showError:false })
+        .catch(console.error);
 
-        .catch(console.error)
-    } else { null };
+    } else { this.setState({ showError:true }) };
   }
 
   handleDelete = (id) => {
@@ -97,6 +99,7 @@ class App extends React.Component {
   }
 
   render() {
+    const error_message = <div className = "error_message">*Missing Required Fields</div>
     const add_form = <div className="input_container">
       <input name="id" value={this.state.id} onChange={this.handleChange} placeholder="id" />
       <input name="product_name" value={this.state.product_name} onChange={this.handleChange} placeholder="product_name" />
@@ -129,7 +132,7 @@ class App extends React.Component {
         <div className="header">
           <p class="shadow text1">Derby Products</p>
         </div>
-        {this.state.toggle ? update_form : null}
+        <div>{this.state.toggle ? update_form : null}{this.state.showError?error_message:null}</div>
         {this.state.toggle ? null : add_form}
         <div className="body">{list}</div>
       </div>

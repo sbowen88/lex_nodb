@@ -134,7 +134,7 @@ input:focus {
   width: 80px;
   position: absolute;
   bottom: 40px;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -170,6 +170,11 @@ input:focus {
 
 .trash_icon {
   height: 15px;
+}
+
+.error_message {
+  color: red;
+  margin-left: 20px;
 }
 
 /* media queries */
