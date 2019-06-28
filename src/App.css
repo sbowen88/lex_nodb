@@ -111,6 +111,7 @@ input:focus {
 
 .product_img {
   max-width: 200px;
+  max-height: 200px;
   padding: 5px;
 }
 
