@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import "./App.css";
+import trash from './trash.png';
 
 
 
@@ -25,19 +26,9 @@ class App extends React.Component {
       .catch(console.error);
   }
 
-  // Fetches our GET route from the Express server. (Note the route we are fetching matches the GET route from server.js
-  // callBackendAPI = async () => {
-  //   const response = await fetch('/express_backend');
-  //   const body = await response.json();
-
-  //   if (response.status !== 200) {
-  //     throw Error(body.message)
-  //   }
-  //   return body;
-  // };
-
-
-  handleChange = (e) => this.setState({ [e.target.name]: e.target.value });
+  handleChange = (e) => {
+    this.setState({ [e.target.name]: e.target.value });
+  }
 
   toggle = (id) => this.setState({ id: id, toggle: !this.state.toggle });
 
@@ -108,11 +99,11 @@ class App extends React.Component {
       <input name="id" value={this.state.id} onChange={this.handleChange} placeholder="id" />
       <input name="product_name" value={this.state.product_name} onChange={this.handleChange} placeholder="product_name" />
       <input name="price" value={this.state.price} onChange={this.handleChange} placeholder="price" />
-      <input name="image" value={this.state.img_url} onChange={this.handleChange} placeholder="image" />
+      <input name="img_url" value={this.state.img_url} onChange={this.handleChange} placeholder="image_url" />
       <button className="add_btn" onClick={this.handleCreate}>Add new product</button>
     </div>
     const update_form = <div className="update_form"><h2>Update Product?</h2>
-      <input name="id" value={this.state.id} onChange={this.handleChange} placeholder="id" />
+      {/* <input name="id" value={this.state.id} onChange={this.handleChange} placeholder="id" /> */}
       <input name="product_name" value={this.state.product_name} onChange={this.handleChange} placeholder="product_name" />
       <input name="price" value={this.state.price} onChange={this.handleChange} placeholder="price" />
       <input name="image" value={this.state.img_url} onChange={this.handleChange} placeholder="image" />
@@ -122,11 +113,11 @@ class App extends React.Component {
     const list = this.state.products.map((product, i) => {
       return (
         <div key={i} className="list_product">
-          <div>Product id:{product.id}</div>
-          <div>Product:{product.product_name}</div>
+          <h3>{product.product_name}</h3>
+          <div>Product id:  {product.id}</div>
           <div>Price: ${product.price}</div>
           <img className="product_img" src={product.img_url}></img>
-          <button className="delete_btn" onClick={() => this.handleDelete(product.id)}>Delete</button>
+          <button className="delete_btn" onClick={() => this.handleDelete(product.id)}>Delete<img className = "trash_icon" src = {trash}></img></button>
           <button className="update_btn" onClick={() => this.toggle(product.id)}>Update</button>
         </div>
       );
