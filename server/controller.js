@@ -42,7 +42,7 @@ const deleteProduct = (req, res, next) => {
     let newProducts = currentProducts.filter(function (obj) {
         return obj.id != id;
     });
-    console.log(`product ${id} deleted`, newProducts)
+    // console.log(`product ${id} deleted`, newProducts)
     res.json(newProducts);
 };
 

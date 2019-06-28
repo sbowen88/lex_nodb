@@ -41,7 +41,7 @@ class App extends React.Component {
       img_url: img_url,
       toggle: false
     }
-    id != null && price != null && product_name != null ?
+    if (id != '' && product_name != '' && price != '' && img_url != '') {
       axios.post('/api/createProduct', body)
         // axios.then(() => axios.get('/api/getProducts'));
 
@@ -52,7 +52,9 @@ class App extends React.Component {
           price: '',
           img_url: '',
         }))
-        .catch(console.error) : null;
+
+        .catch(console.error)
+    } else { null };
   }
 
   handleDelete = (id) => {
@@ -117,7 +119,7 @@ class App extends React.Component {
           <div>Product id:  {product.id}</div>
           <div>Price: ${product.price}</div>
           <img className="product_img" src={product.img_url}></img>
-          <button className="delete_btn" onClick={() => this.handleDelete(product.id)}>Delete<img className = "trash_icon" src = {trash}></img></button>
+          <button className="delete_btn" onClick={() => this.handleDelete(product.id)}>Delete<img className="trash_icon" src={trash}></img></button>
           <button className="update_btn" onClick={() => this.toggle(product.id)}>Update</button>
         </div>
       );
