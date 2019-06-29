@@ -113,7 +113,7 @@ class App extends React.Component {
       {/* <input name="id" value={this.state.id} onChange={this.handleChange} placeholder="id" /> */}
       <input name="product_name" value={this.state.product_name} onChange={this.handleChange} placeholder="product_name" />
       <input name="price" value={this.state.price} onChange={this.handleChange} placeholder="price" />
-      <input name="image" value={this.state.img_url} onChange={this.handleChange} placeholder="image" />
+      <input name="img_url" value={this.state.img_url} onChange={this.handleChange} placeholder="image" />
       <button className="submit_btn" onClick={() => this.handleUpdate(this.state.id)}>Submit</button>
       <button className="cancel_btn" onClick={() => this.toggle()}>Cancel</button>
     </div>
